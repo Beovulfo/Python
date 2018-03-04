@@ -1,0 +1,28 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module combustion2 ! in 
+    interface  ! in :combustion2
+        function dtdz(z,gam,zs,zsbar,betha) ! in :combustion2:combustion2.f
+            real(kind=8) intent(in) :: z
+            real(kind=8) intent(in) :: gam
+            real(kind=8) intent(in) :: zs
+            real(kind=8) intent(in) :: zsbar
+            real(kind=8) intent(in) :: betha
+            real(kind=8) :: dtdz
+        end function dtdz
+        function temper(h,z,gam,zs,zsbar,betha,c) ! in :combustion2:combustion2.f
+            real(kind=8) intent(in) :: h
+            real(kind=8) intent(in) :: z
+            real(kind=8) intent(in) :: gam
+            real(kind=8) intent(in) :: zs
+            real(kind=8) intent(in) :: zsbar
+            real(kind=8) intent(in) :: betha
+            real(kind=8) intent(in) :: c
+            real(kind=8) :: temper
+        end function temper
+    end interface 
+end python module combustion2
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
